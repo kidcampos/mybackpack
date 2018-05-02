@@ -1,0 +1,1725 @@
+.app{
+	display: none;
+}
+
+html, body{
+	background-color: #0e1625;
+	/*background-color: #fff;*/
+	color: #ffffff;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: system;
+}
+
+h5{
+	color: #000000;
+}
+
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src:  url('../fonts/raleway/Raleway-Regular.ttf') format('truetype');
+}
+#loginForm{
+	position: relative;
+    z-index: 20;
+    background-color: #efefe9;
+    height: 250px;
+    width: 90%;
+    top: -330px;
+    color: #000;
+}
+#imgLoginLogo{
+	
+	height: 100%;
+	width: 100%;
+	display: table;
+}
+#imgLoginLogoChild{
+	display: table-cell;
+	vertical-align: middle;
+	height: 100%;
+	width: 100%;
+}
+#imgLoginLogoChild img{
+	position: relative;
+	top: -150px;
+	height: 18%;
+	width: auto;
+
+}
+ #backpack{
+ 	height: 100%;
+ 	display: none;
+ 	overflow: auto;
+ 	background-color: #0e1625;
+ 	
+ }
+
+ .content-text{
+ 	color: #f1f3f0;
+ }
+
+ .menu-text{
+ 	font-size: 9pt;
+ 	line-height: 0pt;
+ 	margin-top: 8px;
+ 	font-variant: normal;
+ }
+ .side-nav{
+ 	width: 200px;
+ }
+
+
+@media only screen and (max-height:500px){
+  	#addInput{
+		max-height: 80%;
+		height: 80%;
+	}
+
+}
+@media only screen and (min-height:500px){
+	#addInput{
+		max-height: 80%;
+		height: 55%;
+	}
+}
+@media only screen and (max-height:570px){
+  	#logo{
+		width: 240px;
+		user-drag: none; 
+		user-select: none;
+		-moz-user-select: none;
+		-webkit-user-drag: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+	}
+
+
+	#logopic{
+		height: 80px;
+		width: 80px;
+		margin-top: 70px;
+		user-drag: none; 
+		user-select: none;
+		-moz-user-select: none;
+		-webkit-user-drag: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+	}
+}
+@media only screen and (min-height:570px){
+		#logo{
+			width: 300px;
+			user-drag: none; 
+			user-select: none;
+			-moz-user-select: none;
+			-webkit-user-drag: none;
+			-webkit-user-select: none;
+			-ms-user-select: none;
+		}
+
+
+		#logopic{
+			height: 100px;
+			width: 100px;
+			margin-top: 100px;
+			user-drag: none; 
+			user-select: none;
+			-moz-user-select: none;
+			-webkit-user-drag: none;
+			-webkit-user-select: none;
+			-ms-user-select: none;
+		}
+}
+#menubuttons{
+	position: fixed;
+	width: 100%;
+	display: none;
+	bottom:0;
+	z-index: 999;
+
+}
+
+#menubuttonsGuest{
+	position: fixed;
+	width: 100%;
+	display: none;
+	bottom:0;
+	z-index: 999;
+
+}
+
+#menubuttonsOnline{
+	display: none;
+	position: fixed;
+	width: 100%;
+	display: none;
+	bottom:0;
+	z-index: 999;
+
+}
+
+.list-groups a{
+	top: 20px;
+	height: 50px;
+	width: 50%;
+
+}
+
+#button1, #button2, #button3, #button4{
+	color: #ffffff;
+	height: 60px;
+	padding-top: 10px;
+	background-color: #0e1625;
+	box-shadow: none;
+}
+#button1:hover, #button2:hover, #button3:hover, #button4:hover{
+	color: #ffffff;
+}
+
+#createAddbutton{
+	background-color: #e64a19;
+	margin-bottom: 10px;
+	bottom: 50px;	
+}
+.tempButton{
+	bottom: 50px;
+	margin-bottom: 10px;
+}
+#createAddbutton i{
+	color: #0e1625;
+}
+
+
+ul { 
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1 em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;
+}
+
+.modal{
+	color: #000000;
+	width: 90%;
+	z-index: 11111;
+	margin-bottom: 50px;
+}
+
+#modalOption{
+	padding-bottom: 50px;
+}
+.modal.modal-fixed-footer#modal2{
+	color: #000000;
+	height: auto;
+}
+.modal#modal2{
+	margin-top: 40%;
+}
+
+/*#loadcontainer{
+	height: 50%;
+	position: relative;
+	width: 100%;
+}*/
+/*
+#loadpage{
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+    animation-name: start;
+    animation-duration: 5s;
+    animation-delay: 0s;
+ }
+*/
+/*#logotext{
+	opacity: 0;
+    animation-name: appear;
+    animation-delay: 2s;
+    animation-duration: 4s;
+    animation-fill-mode: both;
+}
+#homelogotext{
+	opacity: 1;
+    animation-name: breathe;
+    animation-delay: 2s;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}*/
+@-webkit-keyframes appear {
+    0% {opacity: 0}
+    50% {opacity: 1}
+    100% {opacity: 1}
+}
+@-webkit-keyframes breathe {
+    0% {opacity: 1}
+    20% {opacity: 1}
+    50% {opacity: 0.3}
+    80% {opacity: 1}
+    100% {opacity: 1}
+}
+
+@-webkit-keyframes start {
+     0% {opacity: 0; top:70px;}
+    45% {opacity: 1; top:100px;}
+    75% {opacity: 1; top:100px;}
+    100% {opacity: 1; top:0; }
+}
+
+#button1{
+	opacity: 0;
+	animation-name: popout;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+}
+#button2{
+	opacity: 0;
+	animation-name: popout;
+	animation-duration: 1s;
+	animation-delay: 0.2s;
+	animation-fill-mode: both;
+}
+#button3{
+	opacity: 0;
+	animation-name: popout;
+	animation-duration: 1s;
+	animation-delay: 0.4s;
+	animation-fill-mode: both;
+}
+#button4{
+	opacity: 0;
+	animation-name: popout;
+	animation-duration: 1s;
+	animation-delay: 0.6s;
+	animation-fill-mode: both;
+}
+@-webkit-keyframes popout {
+     from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.headText{
+	position: relative;
+	color: #ffffff;
+	top: 8px;
+	font-size: 12pt;
+	text-shadow: 1px 1px #000;
+}
+#menubar{
+	z-index: 10;
+	top: 0;
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	z-index: 3;
+	
+}
+#menubarItem{
+	z-index: 10;
+	top: 0;
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	z-index: 3;
+	
+}
+#menubarOL{
+	z-index: 10;
+	top: 0;
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	z-index: 3;
+	
+}
+#menubarMemberOL{
+	z-index: 10;
+	top: 0;
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	z-index: 3;
+	
+}
+#menubarMap{
+	z-index: 10;
+	top: 0;
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	z-index: 3;
+	background-color: #0e1625;
+	
+}
+#activityList{
+	position: relative;
+	top: 120px;
+	margin-bottom: 160px;
+}
+#activityDispList{
+	margin-bottom: 60px;
+}
+#activityDispList li{
+	color: #000000;
+	font-size: 12pt;
+	width: 100%;
+	/*padding-top: 15px;*/
+	padding-bottom: 0px;
+}
+#activityDispList li a{
+	/*margin-left: 20px;*/
+}
+
+#activityDispListOL{
+	margin-bottom: 60px;
+}
+#activityDispListOL li{
+	color: #000000;
+	font-size: 12pt;
+	width: 100%;
+	/*padding-top: 15px;*/
+	padding-bottom: 0px;
+}
+#activityDispListOL li a{
+	/*margin-left: 20px;*/
+}
+#displaycontainer{
+    height: auto;
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 17px;
+}
+
+#displaycontainerOL{
+    height: auto;
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 17px;
+    position: relative;
+    top: 65px;
+}
+
+#activitySportsDispList li, #activitySportsDispListCat li{
+	color: #000000;
+	font-size: 12pt;
+	width: 95%;
+	margin-left: 10px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	text-align: left;
+	/*border-bottom: 1px solid #4DB6AC;*/
+}
+#activitySportsDispList2 li{
+	color: #000000;
+	font-size: 12pt;
+	width: 95%;
+	margin-left: 10px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	text-align: left;
+}
+
+#activityGeneralDispList li, #activityGeneralDispListCat li{
+	color: #000000;
+	font-size: 12pt;
+	width: 95%;
+	margin-left: 10px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	text-align: left;
+	/*border-bottom: 1px solid #4DB6AC;*/
+}
+#activityGeneralDispList2 li{
+	color: #000000;
+	font-size: 12pt;
+	width: 95%;
+	margin-left: 10px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	text-align: left;
+}
+
+#activityOutdoorDispList li, #activityOutdoorDispListCat li{
+	color: #000000;
+	font-size: 12pt;
+	width: 95%;
+	margin-left: 10px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	text-align: left;
+	/*border-bottom: 1px solid #4DB6AC;*/
+}
+#activityOutdoorDispList2 li{
+	color: #000000;
+	font-size: 12pt;
+	width: 95%;
+	margin-left: 10px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	text-align: left;
+}
+li #actSportsHeader, li #actSportsHeaderCat{
+	background-color: #0b0f17;
+	color: #ffffff;
+	border-bottom: 1px solid #e64a19;
+	display: inherit;
+	padding-bottom: 8px;
+}
+
+li #actOutdoorHeader, li #actOutdoorHeaderCat{
+	background-color: #0b0f17;
+	color: #ffffff;
+	border-bottom: 1px solid #e64a19;
+	display: inherit;
+	padding-bottom: 8px;
+}
+
+li #actGeneralHeader, li #actGeneralHeaderCat{
+	background-color: #0b0f17;
+	color: #ffffff;
+	border-bottom: 1px solid #e64a19;
+	display: inherit;
+	padding-bottom: 8px;
+}
+
+.collapsible{
+	border-left: none;
+	border-right: none;
+	box-shadow: none;
+	border-top: none; 
+}
+li .collapsible-header{
+	background-color: transparent;
+	color: #000000;
+	border-bottom: 1px solid #e54c25;
+	
+}
+li .collapsible-body{
+	padding-top: 1px;
+	background-color: #ffd443;
+	border-bottom: none;
+	box-shadow: 0 2px 0 2px #253035;
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-bottom: 1px;
+}
+
+li .collapsible-bodyOff{
+	padding-top: 0px;
+	background-color: #ffd443;
+	border-bottom: none;
+	box-shadow: 0 2px 0 2px #253035;
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-bottom: 1px;
+}
+
+.collapsible-bodyOff ul{
+	margin-top: 0px;
+}
+
+li .collapsible-bodyOff a{
+	padding-top: 5px;
+	color: #000000;
+	width: 100px;
+	padding-left: 17px;
+	padding-bottom: 5px;
+	padding-right: 5%;
+
+}
+
+li .collapsible-bodyOL{
+	padding-top: 0px;
+	background-color: #ffd443;
+	border-bottom: none;
+	box-shadow: 0 2px 0 2px #253035;
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+}
+li #collapsibleItem{
+	padding-top: 1px;
+	background-color: #fff;
+	border-bottom: none;
+	box-shadow: 0 2px 0 2px #253035;
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-bottom: 14px;
+	margin-left: 8px;
+}
+.collapsible-body ul{
+	margin-top: 0px;
+}
+.collapsible-bodyOL ul{
+	margin-top: 0px;
+}
+li .collapsible-body a{
+	padding-top: 5px;
+	color: #000000;
+	width: 100%;
+	padding-left: 17px;
+	padding-bottom: 5px;
+	padding-right: 5%;
+
+}
+li .collapsible-bodyOL a{
+	padding-top: 5px;
+	color: #000000;
+	width: 100%;
+	padding-left: 17px;
+	padding-bottom: 5px;
+	padding-right: 5%;
+
+}
+
+li #collapsiblebody{
+	padding-top: 1px;
+	background-color: #ffd443;
+	color: #000;
+	border-bottom: none;
+	box-shadow: none;
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-bottom: 1px;
+}
+#dividerCol{
+	background-color: #fff;
+	/*margin-top: 7px;*/
+}
+#dividerColHead{
+	background-color: #e54c25;
+}
+#quantityBadge{
+	font-size: 12pt;
+    margin-top: 6px;
+}
+#optionbutton{
+	position: relative;
+	font-size: 20pt;
+	margin-bottom: -90px;
+	color: #ffffff;
+	float: right;
+	right: 20px;
+	top:-40px;
+	z-index: 3;
+	text-shadow: 1px 1px #000;
+}
+
+#notifbutton{
+	position: relative;
+	font-size: 15pt;
+	margin-bottom: -90px;
+	color: #ffffff;
+	float: right;
+	right: 73px;
+	top:-36px;
+	z-index: 3;
+	text-shadow: 1px 1px #000;
+}
+
+#viewActbutton{
+	width: 100%;
+	background-color: transparent;
+	text-transform: none;
+	color: #000000;
+	font-size: 12pt;
+	height: 50px;
+	line-height: 50px;
+	padding-left: 30px;
+	box-shadow: none;
+	text-align: left;
+}
+
+#confirmModal{
+	width: 100%;
+	background-color: transparent;
+	text-transform: none;
+	color: #000000;
+	font-size: 12pt;
+	height: 50px;
+	line-height: 50px;
+	padding-left: 30px;
+	box-shadow: none;
+	text-align: center;
+}
+
+#confirmHead{
+	font-size: 13pt;
+    margin-top: 20px;
+    line-height: 24px;
+    margin-bottom: 4px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #607D8B;
+}
+#displayhead h5{
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+	font-weight: bolder;
+	top: 10px;
+	/*letter-spacing: -1px;*/
+}
+
+#displayheadOL h5{
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+	font-weight: bolder;
+	top: 10px;
+	letter-spacing: -1px;
+}
+#displayheadplantext{
+	position: relative;
+/*	display: table-cell;*/
+	vertical-align: middle;
+	font-weight: bolder;
+	top: 10px;
+	letter-spacing: -1px;
+}
+
+#headBackground{
+	height: 250px;
+	width: 100%;
+	background-color: #f58a67;
+	/*background-image: url("../images/home/actdisp.gif");*/
+	background-position: 50% 50%;
+	/*text-shadow: 2px 2px #0e1625;*/
+	display: table;
+	/*color: #ffffff;*/
+	text-transform: uppercase;
+}
+#headBackgroundSettings{
+	height: 250px;
+	width: 100%;
+	background-color: #f58a67;
+	background-image: url("../images/settingsDisp.gif");
+	background-position: 40% 50%;
+	text-shadow: 2px 2px #0e1625;
+	display: table;
+	color: #ffffff;
+	font-weight: bolder;
+}
+#planHeadBackground{
+	height: 250px;
+	width: 100%;
+	/*background-color: #f58a67;*/
+	/*background-image: url("../");*/
+	background-position: 50% 30%;
+	display: table;
+	color: #ffffff;
+	text-transform: uppercase;
+}
+#headBackCont{
+	height: 100%;
+	vertical-align: middle;
+	display: table-cell;
+	position: relative;
+
+}
+
+#headBackCont h5{
+	font-weight: bolder;
+	letter-spacing: -1px;
+}
+#headBackCont h6{
+	font-weight: bolder;
+	/*color: #000;*/
+}
+#displayheadTempOutdoor h5{
+	position: relative;
+	font-weight: bolder;
+	top: 10px;
+	letter-spacing: -1px;
+}
+#displayheadTempSports h5{
+	position: relative;
+	font-weight: bolder;
+	top: 10px;
+	letter-spacing: -1px;
+}
+
+@media only screen and (max-height:570px){
+	#displayact, #displayactOL{
+		position: relative;
+		top:-20px;
+		height: 100%;
+		display: table;
+		width: 90%;
+		/*background-color: #212121;*/
+	}
+	#displayplan{
+		position: relative;
+		top:-20px;
+		height: 60%;
+		display: table;
+		width: 90%;
+		/*background-color: #212121;*/
+	}
+}
+@media only screen and (min-height:570px){
+	#displayact, #displayactOL{
+		position: relative;
+		top: -20px;
+		height: 100%;
+		display: table;
+		width: 90%;
+		/*background-color: #212121;*/
+	}
+	#displayplan{
+		position: relative;
+		top:-35px;
+		height: 60%;
+		display: table;
+		width: 90%;
+		/*background-color: #212121;*/
+	}
+}
+@media only screen and (max-height:570px){
+	#readact{
+		position: relative;
+		margin-top: 5px;
+		/*height: 76%;*/
+		width: 90%;
+		background-color: #ffffff;
+	}
+}
+@media only screen and (min-height:570px){
+	#readact{
+		position: relative;
+		margin-top: 20px;
+		/*height: 80%;*/
+		width: 90%;
+		background-color: #ffffff;
+	}
+}
+
+span.badge {
+    min-width: 3rem;
+    padding: 0 6px;
+    margin-left: 14px;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 10px;
+    height: 22px;
+    color: #757575;
+    float: right;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+#noAct{
+	position: relative;
+	width: 100%;
+	margin-left: 8px;
+	color: #ffffff;
+	display: table-cell;
+	vertical-align: middle;
+	top: 0px;
+	
+}
+
+@media only screen and (max-height:605px){
+	#noActPlan{
+		position: relative;
+		width: 100%;
+		margin-left: 8px;
+		color: #ffffff;
+		display: table-cell;
+		vertical-align: middle;
+		top: -30px;
+		
+	}
+	#noActPlan img{
+		height: 100px;
+		width: auto;
+		opacity: 0.3;
+	}
+	#noActPlan span{
+		font-size: 10pt;
+		color: #ffffff;
+		text-transform: uppercase;
+		font-family: system;
+		opacity: 0.3;
+	}
+}
+@media only screen and (min-height:605px){
+	#noActPlan{
+		position: relative;
+		width: 100%;
+		margin-left: 8px;
+		color: #ffffff;
+		display: table-cell;
+		vertical-align: middle;
+		top: 0px;
+		
+	}
+	#noActPlan img{
+		height: 150px;
+		width: auto;
+		opacity: 0.3;
+	}
+	#noActPlan span{
+		font-size: 10pt;
+		color: #ffffff;
+		text-transform: uppercase;
+		font-family: system;
+		opacity: 0.3;
+	}
+}
+
+
+
+#noActButton{
+	position: relative;
+	top: 20px;
+	background-color: #e64a19;
+	color: #fff;
+
+}
+
+#noAct img{
+	height: 170px;
+	width: auto;
+	opacity: 0.3;
+}
+#noAct span{
+	font-size: 10pt;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-family: system;
+	opacity: 0.3;
+}
+
+
+#backbutton{
+	 color:#ffffff;
+	 left: 20px;
+	 position: absolute;
+	 font-size: 14pt;
+	 z-index: 3;
+}
+#txtSearchActivity{
+	width: 70%;
+}
+#txtSearchTempSportsActivity{
+	width: 70%;
+}
+
+@media only screen and (max-height:570px){
+	#actcont{
+		position: relative;
+		top: -83px;
+		height: 100%;
+		width: 90%;
+
+	}
+
+	#actcontOL{
+		position: relative;
+		top: 0;
+		display: table;
+		height: 100%;
+		width: 90%;
+
+	}
+	#groupcont{
+		position: relative;
+		top: 0;
+		height: 100%;
+		width: 90%;
+
+	}
+	#catcont, #itemcont{
+		position: relative;
+		top: -147px;
+		height: 100%;
+		width: 90%;
+	}
+
+}
+@media only screen and (min-height:570px){
+	#actcont{
+		position: relative;
+		top:-83px;
+		height:100%;
+		width: 90%;
+	}
+	#actcontOL{
+		position: relative;
+		top: 0;
+		display: table;
+		height: 100%;
+		width: 90%;
+
+	}
+	#groupcont{
+		position: relative;
+		top: 0;
+		height: 100%;
+		width: 90%;
+
+	}
+	#catcont, #itemcont{
+		position: relative;
+		top:-147px;
+		height:100%;
+		width: 90%;
+	}
+}
+#activityListNames{
+	color: #ffffff;
+	font-size: 12pt;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #0b0f17;
+}
+#activityListContainer{
+	display: table;
+	height: 100%;
+}
+
+#activityListContainerOL{
+	display: table;
+	height: 100%;
+}
+
+ #categoryListContainer,#itemListContainer{
+	display: table;
+	height: 100%;
+	position: relative;
+	top: 0px;
+}
+#activityList li, #categoryList li, #itemList li{
+	padding-bottom: 8px;
+	margin-left: -6px;
+    margin-right: -5px;
+}
+#actdivide{
+	background-color: #e64a19;
+	width: 100%;
+}
+.done{
+	margin-top: -35px;
+}
+#optionbuttonAct{
+	position: relative;
+	z-index: 2;
+	font-size: 14pt;
+	color: #e64a19;
+	right: 10px;
+	float: right;
+	text-align: center;
+	width: 30px;
+	margin-top: -35px;
+}
+#optionbuttonActOL{
+	position: absolute;
+	z-index: 2;
+	font-size: 14pt;
+	color: #e64a19;
+	right: 5px;
+	float: right;
+	text-align: center;
+	width: 30px;
+	top:14px;
+}
+#checkbuttonPlan{
+	position: relative;
+	z-index: 2;
+	right: 0px;
+	float: right;
+	width: 30px;
+}
+
+#activityListNameInput, #categoryListNameInput, #itemListNameInput{
+	color: #fff;
+	font-size: 12pt;
+	margin-bottom: -10px;
+	background-color: #0b0f17;
+    margin-left: -6px;
+    margin-right: -5px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 30px;
+}
+
+#categoryList, #itemList{
+	position: relative;
+	top: 180px;
+	margin-bottom: 160px;
+}
+
+
+
+
+#modal2 a h5{
+	font-size: 12pt;
+}
+#modal2 a{
+	padding: 7px 22px;
+}
+#modal2{
+	overflow: hidden;
+}
+
+#catmap, #itemmap{
+	position: relative;
+	color: #BFBFBF;
+	font-size: 9pt;
+	margin-left: 20px;
+	top: 50px;
+	margin-bottom: -20px;
+
+}
+/*#itemmap{
+	position: relative;
+	color: #BFBFBF;
+	font-size: 11pt;
+	margin-left: 20px;
+	margin-top: -8px;
+	margin-bottom: -20px;
+
+}*/
+#cathead, #itemhead{
+	position: relative;
+	top: 70px;
+}
+#cathead h5{
+	font-weight: bolder;
+	color: #fff;
+	letter-spacing: -1px;
+}
+#categoryListNames, #itemListNames{
+	color: #ffffff;
+	font-size: 12pt;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #0b0f17;
+}
+#txtSearchCategory{
+	width: 70%;
+}
+/*
+@media only screen and (max-height:570px){
+	#itemcont{
+		position: relative;
+		margin-top: 5px;
+		height: 76%;
+		width: 90%;
+		background-color: #ffffff;
+	}
+}
+@media only screen and (min-height:570px){
+	#itemcont{
+		position: relative;
+		margin-top: 20px;
+		height: 80%;
+		width: 90%;
+		background-color: #ffffff;
+	}
+}
+*/
+#itemhead h5{
+	font-weight: bolder;
+	letter-spacing: -1px;
+	color: #fff;
+}
+/*
+#itemList li{
+	padding-bottom: 8px;
+}
+#itemListNames{
+	color: #000000;
+	font-size: 12pt;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}*/
+#txtSearchItem{
+	width: 70%;
+}
+
+#modal1{
+	max-height: 80%;
+	height: 80%;
+}
+
+
+#itemdetails h4{
+	font-weight: bold;
+	font-size: 1.9rem;
+}
+#actCattemp{
+	min-height: 100%;
+	/*margin-top: -50px;*/
+	padding-bottom: 60px;
+	padding-top: 50px;
+	margin-bottom: -50px;
+}
+
+html>body #actCattemp{
+	height: 100%;
+	width: 100%;
+}
+a #tempGeneral h3, a #tempOutdoor h3, a #tempSports h3{
+	position: relative;
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 21pt;
+	text-shadow: #000000 2px 2px 4px;
+	margin-top: 19px;
+}
+
+#tempGeneral{
+	position: relative;
+	height: 33.33%;
+	width: 100%;
+	background-image: url('../images/templates/general_temp.jpg');
+	background-size: cover;
+	background-position: center;
+	margin-bottom: 0px;
+	border-bottom: #EEEEEE solid 1px;
+}
+
+#tempGeneral div, #tempOutdoor div, #tempSports div {
+   display: table;
+   width: 100%;
+   height: 100%;
+}
+#tempGeneral span, #tempOutdoor span, #tempSports span {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    text-decoration: none;
+}
+#tempOutdoor{
+	position: relative;
+	height: 33.33%;
+	width: 100%;
+	background-image: url('../images/templates/outdoor_temp.jpg');
+	background-size: cover;
+	background-position: center;
+	margin-bottom: 0px;
+	border-top: #EEEEEE solid 1px;
+	border-bottom: #EEEEEE solid 1px;
+}
+#tempSports{
+	position: relative;
+	height: 33.33%;
+	width: 100%;
+	background-image: url('../images/templates/sports_temp.jpg');
+	background-size: cover;
+	background-position: center;
+	margin-bottom: 0px;
+	border-top: #EEEEEE solid 1px;
+}
+
+#modal3 a h5{
+	font-size: 12pt;
+}
+#modal3 a{
+	padding: 7px 22px;
+}
+
+#modal4{
+	overflow: hidden;
+}
+
+
+#modal4 a img{
+	border:1px solid #000000;
+	margin: 5px 25px 24px;
+}
+#iconLink{
+	display: inline-block;
+}
+#iconName{
+	margin-top:-22px;
+	font-size: 11px;
+	text-decoration: none;
+	color: #000000;
+	width: 100px;
+	text-align: center;
+	display: grid;
+	margin-left: 17px;
+}
+
+#searchBarIcon div{
+	position: fixed;
+    background-color: #fafafa;
+    box-shadow: none;
+    margin-top: -24px;
+    padding-left: 2.75em;
+    padding-right: 2.75em;
+    padding-top: 20px;
+    margin-left: 1px;
+    width: 100%;
+}
+.searchBarCont{
+	position: relative;
+	top:30px;
+	z-index: 99;
+}
+
+@-webkit-keyframes iconSelect {
+     from {border: 1px solid #000000;}
+    to {
+    	border: 1px solid #026a5b;
+    	box-shadow: 1px 1px 9px 0px;
+    }
+}
+
+@-webkit-keyframes iconDeselect {
+     from {border: 1px solid #026a5b;
+    	box-shadow: 1px 1px 9px 0px;}
+    to {
+    	border: 1px solid #000000;
+    }
+}
+
+.modal.modal-fixed-footer#modal3{
+	color: #000000;
+	height: auto;
+}
+.modal#modal3{
+	margin-top: 40%;
+}
+
+#activityTempList{
+	position: absolute;
+	width: 100%;
+	top: 50px;
+	background-color: #0e1625;
+	overflow: auto;
+}
+
+.checkCat{
+	display: none;
+}
+#planList{
+	position: relative;
+	top: 70px;
+	margin-bottom: 160px;
+}
+
+#travelcont{
+	position: relative;
+	height: 100%;
+	width: 90%;
+}
+#travelcontchild{
+	display: table;
+	height: 100%;
+}
+#plancont{
+	position: relative;
+	height: 100%;
+	width: 90%;
+}
+#plancontchild{
+	display: table;
+	height: 100%;
+}
+#travelNames{
+	color: #ffffff;
+	font-size: 10pt;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #0b0f17;
+}
+#checklistDrop{
+	display: none;
+}
+#setTravelAlarm{
+	display: none;
+}
+
+/* Login Page */
+
+#loginpage{
+	height: 100%;
+	width: 100%;
+	display: none;
+	background-color: #0e1625;
+}
+
+/* Display Page */
+
+#homepage{
+	display: none;
+	height: 100%;
+	position: relative;
+}
+#homepageOnline{
+	display: none;
+	height: 100%;
+	position: relative;
+}
+
+#displayOLcheck{
+	display: none;
+	height: 100%;
+	position: relative;
+}
+#viewactivity{
+	display: none;
+	height: 100%;
+	animation-name: popout;
+	animation-duration: 0.5s;
+}
+#activitypage{
+	display: none;
+	height: 100%;
+	animation-name: popout;
+	animation-duration: 0.5s;
+}
+#activitytemppage{
+	display: none;
+	height: 100%;
+	animation-name: popout;
+	animation-duration: 0.5s;
+}
+#activitytemppageSports{
+	display: none;
+	animation-name:popout;
+	animation-duration: 0.5s;
+}
+#activitytemppageOutdoor{
+	display: none;
+	animation-name:popout;
+	animation-duration: 0.5s;
+}
+#activitytemppageGeneral{
+	display: none;
+	animation-name:popout;
+	animation-duration: 0.5s;
+}
+#categorypage{
+	display: none;
+	height: 100%;
+	animation-name: popout;
+	animation-duration: 0.5s;
+}
+#itempage{
+	display: none;
+	height: 100%;
+	animation-name: popout;
+	animation-duration: 0.5s;
+}
+
+#acttempgenerallist{
+	display: none;
+}
+#cattempgenerallist{
+	display: none;
+}
+#itemtempgenerallist{
+	display: none;
+}
+
+#acttempoutdoorlist{
+	display: none;
+}
+#cattempoutdoorlist{
+	display: none;
+}
+#itemtempoutdoorlist{
+	display: none;
+}
+
+#acttempsportslist{
+	display: none;
+}
+#cattempsportslist{
+	display: none;
+}
+#itemtempsportslist{
+	display: none;
+}
+
+/* Itinerary */
+
+#itinerarypage{
+	display: none;
+	height: 100%;
+	background-color: #0e1625;
+}
+#travelpage{
+	display: none;
+	height: 100%;
+	background-color: #0e1625;
+}
+#traveldivide{
+	background-color: #e64a19;
+	width: 100%;
+	margin-bottom: 20px;
+}
+#traveldetails, #plandetails, #groupdetails{
+	font-size: 13pt;
+}
+#travelChecklistDrop{
+	display: none;
+}
+#travelAlarmTime{
+	display: none;
+}
+#planpage{
+	display: none;
+	height: 100%;
+	background-color: #0e1625;
+}
+#timepicker__clear{
+	display: none;
+}
+/* Map */
+#optionbuttonmap{
+	position: absolute;
+	height: 30px;
+	width: 30px;
+	background-color: #ffffff;
+	z-index: 999;
+	right: 7px;
+	font-size: 16pt;
+	top: 12px;
+	color: #757575;
+	text-align: center;
+	display: none;
+}
+#optionRefresh{
+	position: absolute;
+	height: 30px;
+	width: 30px;
+	background-color: #ffffff;
+	z-index: 999;
+	right: 7px;
+	font-size: 16pt;
+	top: 55px;
+	color: #757575;
+	text-align: center;
+	display: none;
+}
+#map{
+	display: none;
+	height: 100%;
+	width: 100%;
+	background-color: #0e1625;
+}
+#mappage{
+	display: block;
+	height: 100%;
+	
+}
+#map_canvas{
+	height: 100%;
+	width: 100%;
+	margin-bottom: -50px;
+	background-color: #0e1625;
+}
+
+.gm-fullscreen-control{
+	display: none;
+}
+#bottommodal{
+	z-index: 99;
+}
+
+/* Settings */
+
+#settings{
+	display: none;
+	height: 100%;
+	background-color: #0e1625;
+}
+
+#settingsguest{
+	display: none;
+	height: 100%;
+	background-color: #0e1625;
+}
+
+#displayheadsettings{
+	position: relative;
+	/*top:40px;*/
+}
+
+#displaycontsettings{
+	position: relative;
+	top:10px;
+}
+
+#displayheadsettingsGuest{
+	position: relative;
+	top:10px;
+}
+
+#displaycontsettingsGuest{
+	position: relative;
+	top:-25px;
+}
+
+a #onlineCheck h3, a #personalCheck h3{
+	position: relative;
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 21pt;
+	text-shadow: #000000 2px 2px 4px;
+	margin-top: 19px;
+}
+
+#personalCheck{
+	position: relative;
+	height: 50%;
+	width: 100%;
+	background-image: url('../images/templates/general_temp.jpg');
+	background-size: cover;
+	background-position: center;
+	margin-bottom: 0px;
+	border-bottom: #EEEEEE solid 1px;
+}
+
+#onlineCheck{
+	position: relative;
+	height: 50%;
+	width: 100%;
+	background-image: url('../images/templates/outdoor_temp.jpg');
+	background-size: cover;
+	background-position: center;
+	margin-bottom: 0px;
+	border-bottom: #EEEEEE solid 1px;
+}
+
+#onlineCheck div, #personalCheck div {
+   display: table;
+   width: 100%;
+   height: 100%;
+}
+#onlineCheck span, #personalCheck span{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    text-decoration: none;
+}
+
+#displaycontOnline{
+	min-height: 100%;
+	/*margin-top: -50px;*/
+	padding-bottom: 60px;
+	padding-top: 50px;
+	margin-bottom: -50px;
+}
+
+html>body #displaycontOnline{
+	height: 100%;
+	width: 100%;
+}
+
+#groupList{
+	position: relative;
+	top: 120px;
+	margin-bottom: 160px;
+}
+
+#groupList li{
+	padding-bottom: 8px;
+	margin-left: -6px;
+    margin-right: -5px;
+}
+
+#groupListContainer{
+	display: table;
+	height: 100%;
+}
+#groupListNames{
+	color: #ffffff;
+	font-size: 12pt;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #0b0f17;
+}
+
+#grouppageOL{
+	display: none;
+	height: 100%;
+}
+
+#activitypageOL{
+	display: none;
+	height: 100%;
+	position: relative;
+}
+
+#memberpageOL{
+	display: none;
+	height: 100%;
+}
+
+#memberList{
+	position: relative;
+	top: 120px;
+	margin-bottom: 160px;
+}
+
+#memberListContainer{
+	display: table;
+	height: 100%;
+}
+#memberListNames{
+	color: #ffffff;
+	font-size: 12pt;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #0b0f17;
+}
+
+#loadingChecklist{
+	position: relative;
+	display: table;
+	height: 100%;
+}
+#loadingChecklistChild{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.short-and-fixed{
+	white-space: nowrap;
+	display: inline-block;
+}
+
+.long-and-truncated {
+  flex: 1;
+  
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.parent-flex{
+	 display: flex;
+}
+
+#assignInput{
+	display: none;
+}
+
+.collection{
+	margin-top: 0;
+}
+
+/*#dueHour{
+	display: none;
+}*/
