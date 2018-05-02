@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+       <!--  <link rel="stylesheet" type="text/css" href="css/index.css"> -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <title>My|Backpack</title>
+
+    </head>
+    <body style="background-color:#0e1625" onload="onLoad()">
+        <div class="app">
+            <h1>Local-Notification Example</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+        </div>
+
+        <div id="loginpage" class="row">
+            <div id="imgLoginLogo" class="container row">
+                <div id="imgLoginLogoChild" class="container row center">
+                    <img src="images/home/backpack_logo.png">
+                </div>
+                
+            </div>
+            <div id="loginForm" class="container center">
+                <div class="container" style="padding-top:12px; background-color:#efefe9; width:100%">
+                    <form class="row">
+                      <div class="container center">
+                        <div class="input-field col s12" style="width:90%">
+                            <i class="fa fa-user prefix"></i>
+                        
+                          <input id="login_user" type="text" class="validate">
+                          <label for="login_user">User Name</label>
+                        </div>
+                        <div class="input-field col s12" style="width:90%">
+                          <i class="fa fa-lock prefix"></i>
+                          <input id="login_pass" type="password" class="validate">
+                          <label for="login_pass">Password</label>
+                        </div>
+                      </div>
+                     
+                    </form>
+                    <div class="container" style="position:relative;top:-15px">
+                         <button href="#!" class="waves-effect waves-light btn" onclick='component.login_user()' style="margin-top:5px">Login</button>
+                         <button href="#!" class="waves-effect waves-light btn" onclick='component.login_guest()' style="margin-top:5px">Login as Guest</button>
+                          <br>
+                          <a href="#modal1" style="position:relative;top:10px;" class="modal-trigger" onclick='component.signup_userinput()'><span style="font-size:9pt; color:#26a69a; font-weight:bold">Sign Up</span></a>
+
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        
+        <div id="backpack">
+            <div id="loadingChecklist" class="row center">
+              <div id="loadingChecklistChild">
+                  <div class="preloader-wrapper active">
+                    <div class="spinner-layer spinner-red-only">
+                      <div class="circle-clipper left">
+                        <div class="circle"></div>
+                      </div><div class="gap-patch">
+                        <div class="circle"></div>
+                      </div><div class="circle-clipper right">
+                        <div class="circle"></div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+            <div id="homepage">
+                    <div id="menubar">  
+                        <div>
+                            <h5 class="headText row center">My Checklist</h5>
+                            <a href="#bottommodal" onclick="component.optionBottomModal()" id="optionbutton" class="modal-trigger"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div id="displayhead" class="row center">
+                    </div>
+                    <div id="displayact" class="container">
+                    </div>
+            </div>
+
+            <div id="homepageOnline">
+                    <div id="menubar">  
+                        <div>
+                            <h5 class="headText row center">Checklist</h5>
+                            
+                        </div>
+                    </div>
+                    <div id="displaycontOnline">
+                    </div>
+                    
+            </div>
+            
+            <!--Checklist-->
+                
+
+                <div id="activitypage">
+                    <div id="menubar">  
+                        <div>
+                            <a href="#" id="backbutton" onclick="component.homePage()"><i class="fa fa-arrow-left fa-lg" aria-hidden="true"></i></a>
+                            <h5 class="headText row center">Activities</h5>
+                            <a href="#bottommodal" onclick="component.optionBottomModalAct()" id="optionbutton" class="modal-trigger"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div id="searchbarAct" class="container searchBarCont">
+                    </div>
+                    <div id="actcont" class="container">
+                        <div id="activityListContainer" class="container">
+                        </div>
+                    </div>
+                </div>
+                <div id="activitytemppage">
+                    <div id="menubar">  
+                        <div>
+                            <a href="#" id="backbutton" onclick="component.backTemp()"><i class="fa fa-arrow-left fa-lg" aria-hidden="true"></i></a>
+                            <h5 class="headText row center">Templates</h5>
+                            <a href="#bottommodal" onclick="component.optionBottomModalAct()" id="optionbutton" class="modal-trigger"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+
+                    <div id="actCattemp">
+                        
+                    </div>
+                </div>
+
+                <div id="activitytemppageGeneral">
+                    <div id="menubar">  
+                        <div>
+                            <a href="#" id="backbutton" onclick="component.backTemp()"><i class="fa fa-arrow-left fa-lg" aria-hidden="true"></i></a>
+                            <h5 class="headText row center">General</h5>
+                            <a href="#bottommodal" onclick="component.optionBottomModalAct()" id="optionbutton" class="modal-trigger"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div id="acttempgenerallist">
+                    </div>
+                    <div id="cattempgenerallist">
+                    </div>
+                    <div id="itemtempgenerallist">
+                    </div>
+                </div>
+
+                <div id="activitytemppageOutdoor">
+                    <div id="menubar">  
+                        <div>
+                            <a href="#" id="backbutton" onclick="component.backTemp()"><i class="fa fa-arrow-left fa-lg" aria-hidden="true"></i></a>
+                            <h5 class="headText row center">Outdoor</h5>
+                            <a href="#bottommodal" onclick="component.optionBottomModalAct()" id="optionbutton" class="modal-trigger"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div id="acttempoutdoorlist">
+                    </div>
+                    <div id="cattempoutdoorlist">
+                    </div>
+                    <div id="itemtempoutdoorlist">
+                    </div>
+                </div>
+
+                <div id="activitytemppageSports">
+                    <div id="menubar">  
+                        <div>
+                            <a href="#" id="backbutton" onclick="component.backTemp()"><i class="fa fa-arrow-left fa-lg" aria-hidden="true"></i></a>
+                            <h5 class="headText row center">Sports</h5>
+                            <a href="#bottommodal" onclick="component.optionBottomModalAct()" id="optionbutton" class="modal-trigger"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div id="acttempsportslist">
+                    </div>
+                    <div id="cattempsportslist">
+                    </div>
+                    <div id="itemtempsportslist">
+                    </div>
+                </div>
+                
+                <div id="categorypage">
+                    <div id="menubar">  
+                        <div>
+                            <a href="#" id="backbutton" onclick="component.activityPage()"><i class="fa fa-arrow-left fa-lg" aria-hidden="true"></i></a>
+                            <h5 class="headText row center">Categories</h5>
+                            <a href="#bottommodal" onclick="component.optionBottomModalAct()" id="optionbutton" class="modal-trigger"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div id="catmap" class="row">
+                    </div>
+                    <div id="cathead" class="row center">
+                    </div>
+                    <div id="searchbarCat" class="container searchBarCont">
+                    </div>
+                    
+                    <div id="catcont" class="container">
+                        <div id="categoryListContainer" class="container">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="itempage">
+                    <div id="menubarItem">  
+                        
+                    </div>
+                    <div id="itemmap" class="row">
+                    </div>
+                    <div id="itemhead" class="row center">
+                    </div>
+                    <div id="searchbarItem" class="container searchBarCont">
+                    </div>
+
+                    <div id="itemcont" class="container">
+                        <div id="itemListContainer" class="container">
+                        </div>
+                    </div>
+                </div>
+
+            <!--Checklist Online-->
+                 <div id="grouppageOL">
+                        <div id="menubar">  
+                            <div>
+                                <h5 class="headText row center">Groups</h5>
+                                <a href="#bottommodal" onclick="component.optionBottomModalOL()" id="optionbutton" class="modal-trigger"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+
+                            </div>
+                        </div>
+                        <div id="groupcont" class="container">
+                            <div id="groupListContainer" class="container">
+                            </div>
+                        </div>
+                        
+                </div>
+                 <div id="activitypageOL">
+                    <div id="menubarOL">  
+                       
+                    </div>
+                    <div id="actcontOL" class="container">
+                        <!-- <div id="activityListContainerOL" class="container"> -->
+                    </div>
+                </div>
+
+                <div id="memberpageOL">
+                    <div id="menubarMemberOL">  
+                       
+                    </div>
+                    <div id="memberListContainer" class="container">
+                        <!-- <div id="activityListContainerOL" class="container"> -->
+                    </div>
+                </div>
+             
+            <!--Itinerary-->
+                <div id="itinerarypage">
+                    <div id="menubar">  
+                        <div>
+                            <h5 class="headText row center">Itinerary</h5>
+                            <a href="#bottommodal" onclick="component.optionItineraryHomeMenu()" id="optionbutton" class="modal-trigger"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div id="displayheadplan" class="row center">
+                    </div>
+                    <div id="displayplan" class="container">
+                    </div>
+                </div>
+                <div id="travelpage">
+                    <div id="menubar">  
+                        <div>
+                            <a href="#" id="backbutton" onclick="component.itineraryPage()"><i class="fa fa-arrow-left fa-lg" aria-hidden="true"></i></a>
+                            <h5 class="headText row center">Travels</h5>
+                            <a href="#bottommodal" onclick="component.optionItineraryMenu()" id="optionbutton" class="modal-trigger"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div id="travelcont" class="container">
+                        <div id="travelcontchild" class="container">
+                        </div>
+                    </div>
+                </div>
+                <div id="planpage">
+                    <div id="menubar">  
+                        <div>
+                            <a href="#" id="backbutton" onclick="component.travelPage()"><i class="fa fa-arrow-left fa-lg" aria-hidden="true"></i></a>
+                            <h5 class="headText row center">Plans</h5>
+                            <a href="#bottommodal" onclick="component.optionItineraryMenu()" id="optionbutton" class="modal-trigger"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div id="plancont" class="container">
+                        <div id="plancontchild" class="container">
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div id="settings">
+            <div id="settingspage">
+                    <div id="menubar">  
+                        <div>
+                            <h5 class="headText row center">Settings</h5>
+                            
+                        </div>
+                    </div>
+                    <div id="displayheadsettings">
+                    </div>
+                    <div id="displaycontsettings" class="container">
+                    </div> 
+            </div>
+        </div>
+
+        <!--Map-->
+        <div id="menubuttons">
+                 <div class="list-groups row center">
+                    <a id="button1" class="list-group-item waves-effect waves-light btn col s3" onclick="component.homePage()"><i style="font-size:25px" class="fa fa-list-alt"></i><br><span></span></a>
+                    <a id="button2" class="list-group-item waves-effect waves-light btn col s3" onclick="component.itineraryPage()"><i style="font-size:25px" class="fa fa-calendar" aria-hidden="true"></i><br><span></span></a>
+                    <a id="button3" class="list-group-item waves-effect waves-light btn col s3" onclick="component.map()"><i style="font-size:25px" class="fa fa-map" aria-hidden="true"></i><br><span></span></a>
+                    <a id="button4" class="list-group-item waves-effect waves-light btn col s3" onclick="component.settings()"><i style="font-size:25px" class="fa fa-gear" aria-hidden="true"></i><br><span></span></a>
+                </div>
+        </div>
+
+        <div id="menubuttonsOnline">
+                 <div class="list-groups row center">
+                    <a id="button1" class="list-group-item waves-effect waves-light btn col s3" onclick="component.homePageOnline()"><i style="font-size:25px" class="fa fa-list-alt"></i><br><span></span></a>
+                    <a id="button2" class="list-group-item waves-effect waves-light btn col s3" onclick="component.itineraryPage()"><i style="font-size:25px" class="fa fa-calendar" aria-hidden="true"></i><br><span></span></a>
+                    <a id="button3" class="list-group-item waves-effect waves-light btn col s3" onclick="component.map()"><i style="font-size:25px" class="fa fa-map" aria-hidden="true"></i><br><span></span></a>
+                    <a id="button4" class="list-group-item waves-effect waves-light btn col s3" onclick="component.settings()"><i style="font-size:25px" class="fa fa-gear" aria-hidden="true"></i><br><span></span></a>
+                </div>
+        </div>
+        <div id="map">
+        </div>
+        <!-- Modal -->
+                <div id="modal1" class="modal modal-fixed-footer">
+                </div>
+                <div id="modal2" class="modal modal-fixed-footer modal-close container">
+                </div>
+                <div id="modal3" class="modal modal-fixed-footer modal-close container" style="overflow:hidden">
+                </div>
+                <div id="modal4" class="modal modal-fixed-footer container row" style="overflow:hidden">
+                </div>
+                <div id="bottommodal" class="modal bottom-sheet">
+                </div>
+                <div id="bottommodalmap" class="modal bottom-sheet">
+                </div>
+                 <div id="addInput" class="modal modal-fixed-footer">
+                </div>
+                <div id="notifbar" class="modal modal-fixed-footer">
+                </div>
+        <script src="js/jquery-3.1.1.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>     
+        <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyD6vXct9ZdW1UfNefcn_NwkhbVJyWJLAjQ",
+            authDomain: "my-backpack.firebaseapp.com",
+            databaseURL: "https://my-backpack.firebaseio.com",
+            projectId: "my-backpack",
+            storageBucket: "",
+            messagingSenderId: "1095807850089"
+          };
+          firebase.initializeApp(config);
+        </script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script src="js/app.js"></script>
+        <script type="text/javascript">
+
+
+            // Wait for device API libraries to load
+            //
+            function onLoad() {
+                document.addEventListener("deviceready", onDeviceReady, false);
+            }
+
+            // device APIs are available
+            //
+            function onDeviceReady() {
+                // Register the event listener
+                document.addEventListener("backbutton", onBackKeyDown, false);
+            }
+
+            // Handle the back button
+            //
+            function onBackKeyDown() {
+                Materialize.toast("Press home to quit", 2000);
+            }
+
+             
+        </script>
+
+        
+        <script src="js/init.js"></script>
+        <script src="js/materialize.js"></script>
+        <script type="text/javascript" src="js/modal.js"></script>
+        <script>
+            $(".button-collapse").sideNav();
+            $('.carousel.carousel-slider').carousel({fullWidth: true});
+        
+            
+
+            //var $toastContent = $('<span>I am toast content</span>').add($('<button class="btn-flat toast-action">Undo</button>'));                               
+        </script>
+
+         <script type="text/javascript">
+            app.initialize();
+            
+        </script>
+
+    </body>
+</html>
